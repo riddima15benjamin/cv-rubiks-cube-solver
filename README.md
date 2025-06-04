@@ -1,19 +1,77 @@
-# CV Cube Solver
+# CV Rubik's Cube Solver
 
-## About
-A computer vision Rubik's cube solver implementing Kociemba's two-phase algorithm.
+A computer vision-based Rubik's Cube solver that utilizes OpenCV for image processing and Kociemba's two-phase algorithm for solving the cube.
 
-Created as a Python web application utilizing the OpenCV library for image recognition, the [TwistySim](http://cube.crider.co.uk/twistysim.html) JavaScript API for puzzle visualizations, and [Maxim Tsoy's Python port of Kociemba's algorithm](https://github.com/muodov/kociemba).
+## Features
 
-## Dependencies
-(see [requirements.txt](/requirements.txt))
+- Real-time cube face detection using OpenCV
+- Integration with Kociemba's two-phase algorithm for efficient solving
+- Web-based interface for user interaction
+
+## Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/riddima15benjamin/cv-rubiks-cube-solver.git
+cd cv-rubiks-cube-solver
+```
+
+### 2. Create and activate a virtual environment
+
+```bash
+python3 -m venv env
+source env/bin/activate  # On Windows: env\Scripts\activate
+```
+
+### 3. Install the dependencies
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage
+
+Run the application:
+
+```bash
+python main.py
 ```
-$ git clone https://github.com/raymondtruong/cv-cube-solver.git
-$ cd cv-cube-solver
-$ python3 -m venv env && . env/bin/activate
-(env) $ pip3 install -r requirements.txt
-(env) $ python3 main.py
+
+Then, open your browser and go to:
+
 ```
-The app can then be accessed at 127.0.0.1:5000.
+http://127.0.0.1:5000
+```
+
+to access the web interface.
+
+## Dependencies
+
+- OpenCV
+- Flask
+- NumPy
+- Kociemba’s Rubik's Cube solver (Python implementation)
+
+For a complete list, see `requirements.txt`.
+
+## Folder Structure
+
+```
+cv-rubiks-cube-solver/
+├── static/
+├── templates/
+├── cube_scanner.py
+├── main.py
+├── requirements.txt
+├── solver.py
+└── README.md
+```
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and create a pull request for improvements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
